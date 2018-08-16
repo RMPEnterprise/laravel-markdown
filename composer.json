@@ -16,7 +16,9 @@
         "mockery/mockery": "0.9.0"
     },
     "autoload": {
-        "psr-0": {"RMPEnterprise\\LaravelMarkdown": "src/"}
+        "psr-4": {
+            "RMPEnterprise\\LaravelMarkdown\\": "src"
+        }
     },
     "extra": {
         "laravel": {
