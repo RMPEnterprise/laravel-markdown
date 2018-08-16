@@ -1,6 +1,6 @@
 <?php
 
-namespace Nisbet\LaravelMarkdown;
+namespace RMPEnterprise\LaravelMarkdown;
 
 use Michelf\Markdown;
 use Michelf\MarkdownExtra;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nisbet\LaravelMarkdown\Providers;
+namespace RMPEnterprise\LaravelMarkdown\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -45,7 +45,7 @@ class LaravelMarkdownServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../../../config/laravel-markdown.php', 'laravel-markdown');
 
         $this->app->singleton('laravelMarkdown', function () {
-            return new \Nisbet\LaravelMarkdown\LaravelMarkdownTransformer();
+            return new \RMPEnterprise\LaravelMarkdown\LaravelMarkdownTransformer();
         });
     }
 }

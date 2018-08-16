@@ -1,10 +1,11 @@
 <?php
 
-namespace Nisbet\LaravelMarkdown\Facades;
+namespace RMPEnterprise\LaravelMarkdown\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
+ *
  */
 class LaravelMarkdown extends Facade
 {
