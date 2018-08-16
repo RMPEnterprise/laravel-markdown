@@ -1,0 +1,32 @@
+{
+    "name": "ian-nisbet/laravel-markdown",
+    "description": "Markdown compiler for Laravel and Lumen 5",
+    "keywords": ["laravel", "lumen", "md", "markdown", "illuminate"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ian Nisbet",
+            "email": "ian.nisbet@rmpenterprise.co.uk"
+        }
+    ],
+    "require": {
+        "michelf/php-markdown": "~1.8"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.0"
+    },
+    "autoload": {
+        "psr-0": {"Nisbet\\LaravelMarkdown": "src/"}
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nisbet\\LaravelMarkdown\\Providers\\LaravelMarkdownServiceProvider"
+            ],
+            "aliases": {
+                "Markdown": "Nisbet\\LaravelMarkdown\\Facades\\LaravelMarkdown"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
