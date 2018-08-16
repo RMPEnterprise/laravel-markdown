@@ -31,7 +31,7 @@ class LaravelMarkdownServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../../../config/laravel-markdown.php' => $this->app->getConfigurationPath() . '/' . ('laravel-markdown.php'),
+            __DIR__ . '/../config/laravel-markdown.php' => $this->app->getConfigurationPath() . '/' . ('laravel-markdown.php'),
         ]);
     }
 
@@ -42,7 +42,7 @@ class LaravelMarkdownServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../../config/laravel-markdown.php', 'laravel-markdown');
+        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-markdown.php', 'laravel-markdown');
 
         $this->app->singleton('laravelMarkdown', function () {
             return new \RMPEnterprise\LaravelMarkdown\LaravelMarkdownTransformer();
