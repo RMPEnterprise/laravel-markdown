@@ -1,5 +1,5 @@
 {
-    "name": "RMPEnterprise/laravel-markdown",
+    "name": "rmpenterprise/laravel-markdown",
     "description": "Markdown compiler for Laravel and Lumen 5",
     "keywords": ["laravel", "lumen", "md", "markdown", "illuminate"],
     "license": "MIT",
@@ -17,16 +17,16 @@
     },
     "autoload": {
         "psr-4": {
-            "RMPEnterprise\\LaravelMarkdown\\": "src"
+            "rmpenterprise\\LaravelMarkdown\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "RMPEnterprise\\LaravelMarkdown\\Providers\\LaravelMarkdownServiceProvider"
+                "rmpenterprise\\LaravelMarkdown\\Providers\\LaravelMarkdownServiceProvider"
             ],
             "aliases": {
-                "Markdown": "RMPEnterprise\\LaravelMarkdown\\Facades\\LaravelMarkdown"
+                "Markdown": "rmpenterprise\\LaravelMarkdown\\Facades\\LaravelMarkdown"
             }
         }
     },
