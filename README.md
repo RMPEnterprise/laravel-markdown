@@ -1,8 +1,6 @@
 # laravel-markdown
 
-Provides a simple Laravel 5.* wrapper for Michelf\Markdown package https://github.com/michelf/php-markdown so that it's string method can be used as a Laravel Facade. It will "transform the Markdown from the given string and return it."
-
-Due to the deprecation of Laravel's Service Provider `$defer` property, this packake will not currently work with Laravel 6.0
+Provides a simple Laravel 5 and 6 wrapper for Michelf\Markdown package https://github.com/michelf/php-markdown so that it's string method can be used as a Laravel Facade. It will "transform the Markdown from the given string and return it."
 
 ## Installation
 
