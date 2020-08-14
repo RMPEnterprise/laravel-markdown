@@ -3,8 +3,9 @@
 namespace RMPEnterprise\LaravelMarkdown\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Support\DeferrableProvider;
 
-class LaravelMarkdownServiceProvider extends ServiceProvider
+class LaravelMarkdownServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

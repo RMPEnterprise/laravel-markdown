@@ -1,6 +1,6 @@
 {
     "name": "rmpenterprise/laravel-markdown",
-    "description": "Markdown compiler for Laravel and Lumen 5",
+    "description": "Markdown compiler for Laravel and Lumen 5 and 6",
     "keywords": ["laravel", "lumen", "md", "markdown", "illuminate"],
     "license": "MIT",
     "authors": [
@@ -11,9 +11,6 @@
     ],
     "require": {
         "michelf/php-markdown": "~1.8"
-    },
-    "require-dev": {
-        "mockery/mockery": "0.9.0"
     },
     "autoload": {
         "psr-4": {
