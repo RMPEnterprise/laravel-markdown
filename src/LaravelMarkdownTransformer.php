@@ -9,7 +9,7 @@ class LaravelMarkdownTransformer
 {
     public function __construct()
     {
-        $this->setOptions(config('markdown.options'));
+        $this->setOptions(config('laravel-markdown.options'));
     }
 
     /**
