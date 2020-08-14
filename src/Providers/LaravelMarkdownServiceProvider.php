@@ -4,16 +4,10 @@ namespace RMPEnterprise\LaravelMarkdown\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
+use RMPEnterprise\LaravelMarkdown\LaravelMarkdownTransformer;
 
 class LaravelMarkdownServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
     /**
      * Get the services provided by the provider.
      *
@@ -31,9 +25,11 @@ class LaravelMarkdownServiceProvider extends ServiceProvider implements Deferrab
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/../config/laravel-markdown.php' => $this->app->getConfigurationPath() . '/' . ('laravel-markdown.php'),
-        ]);
+        $source = realpath(__DIR__ . '/../config/laravel-markdown.php');
+
+        $this->publishes([$source => config_path('laravel-markdown.php')]);
+
+        $this->mergeConfigFrom($source, 'laravel-markdown');
     }
 
     /**
@@ -43,10 +39,8 @@ class LaravelMarkdownServiceProvider extends ServiceProvider implements Deferrab
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-markdown.php', 'laravel-markdown');
-
         $this->app->singleton('laravelMarkdown', function () {
-            return new \RMPEnterprise\LaravelMarkdown\LaravelMarkdownTransformer();
+            return new LaravelMarkdownTransformer;
         });
     }
 }
